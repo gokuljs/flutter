@@ -5,7 +5,7 @@ https://flutter.dev/docs/get-started/install;
 
 
 
-# installation source 
+# installation guide
 
 Official Flutter Docs: https://flutter.io/docs/
 macOS Setup Guide: https://flutter.io/setup-macos
