@@ -13,4 +13,4 @@ Windows Setup Guide: https://flutter.io/setup-windows \
 Linux Setup Guide: https://flutter.io/setup-linux \
 Visual Studio Code: https://code.visualstudio.com/ \
 Visual Studio Code Flutter Extension: https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter \
-Android Studio: https://developer.android.com/studio/ \
+Android Studio: https://developer.android.com/studio/ 
