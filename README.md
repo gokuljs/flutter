@@ -1,12 +1,11 @@
+#getting started with flutter
 
-reference material=https://flutter.dev/docs/get-started/install;
+reference material:-
+https://flutter.dev/docs/get-started/install;
 
 
 
 # installation source 
-
-
-
 
 Official Flutter Docs: https://flutter.io/docs/
 macOS Setup Guide: https://flutter.io/setup-macos
