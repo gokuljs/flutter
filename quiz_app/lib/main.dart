@@ -11,6 +11,11 @@ void main() => runApp(Myapp()); // other way of writing the above code
 class Myapp extends StatelessWidget {
   @override //on purpose we overriding the program again and again
   // statelesswidget program slredy have a @override
+
+  void answerquestion() {
+    print('question answered');
+  }
+
   Widget build(BuildContext context) {
     var questions = [
       'what\'s your favourite color',
@@ -28,32 +33,67 @@ class Myapp extends StatelessWidget {
         ),
         body: Column(
           children: [
-            
-            Text('the questions !'),
-            RaisedButton(
-              child: Text('answer 1'),
-              colorBrightness: Brightness.dark,
-              onPressed: null,
+            Text(
+              questions[0],
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             RaisedButton(
-              child: Text('answer 2'),
+              child: Text(
+                'answer 1',
+                style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFB74093)),
+              ),
               colorBrightness: Brightness.dark,
-              onPressed: null,
+              onPressed: answerquestion,
             ),
             RaisedButton(
-              child: Text('answer 3'),
+              child: Text(
+                'answer 2',
+                style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFB74093)),
+              ),
               colorBrightness: Brightness.dark,
-              onPressed: null,
+              onPressed: answerquestion,
             ),
             RaisedButton(
-              child: Text('answer 4'),
+              child: Text(
+                'answer 3',
+                style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFB74093)),
+              ),
               colorBrightness: Brightness.dark,
-              onPressed: null,
+              onPressed: answerquestion,
             ),
             RaisedButton(
-              child: Text('answer 5'),
+              child: Text(
+                'answer 4',
+                style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFB74093)),
+              ),
               colorBrightness: Brightness.dark,
-              onPressed: null,
+              onPressed: answerquestion,
+            ),
+            RaisedButton(
+              child: Text(
+                'answer 5',
+                style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xFFB74093)),
+              ),
+              colorBrightness: Brightness.dark,
+              onPressed: answerquestion,
             ),
           ],
         ), // column widget are the invisible widgets which are used for styling
