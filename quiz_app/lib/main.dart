@@ -27,20 +27,20 @@ class Myapp extends StatelessWidget {
     // it should always return widget thats why ur using widget build
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text("quiz app"),
-          backgroundColor: Colors.black,
+        appBar: AppBar( // the widget which is present at the top of the app 
+          title: Text("quiz app"),// passing text widget 
+          backgroundColor: Colors.black, // passing background color for the app
         ),
-        body: Column(
-          children: [
+        body: Column(  //column is an invisible widget present in the flutter that is used for arranging widget in column wise 
+          children: [ // it has childreen widget to add multiple widgets 
             Text(
               questions[0],
-              style: TextStyle(
+              style: TextStyle(// style widget is used to change the style of the text widget 
                 fontStyle: FontStyle.italic,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            RaisedButton(
+            RaisedButton(  //raised button is one of the action button given by the flutter 
               child: Text(
                 'answer 1',
                 style: TextStyle(
