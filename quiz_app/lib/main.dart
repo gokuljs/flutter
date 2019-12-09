@@ -9,12 +9,15 @@ void main() => runApp(Myapp()); // other way of writing the above code
 // this can be used only if u have one app
 
 class Myapp extends StatelessWidget {
-  @override //on purpose we overriding the program again and again
+  //on purpose we overriding the program again and again
   // statelesswidget program slredy have a @override
-
+  var index=0;
   void answerquestion() {
+    index=index+1;
+    print(index);
     print('question answered');
   }
+  @override 
 
   Widget build(BuildContext context) {
     var questions = [
@@ -34,7 +37,7 @@ class Myapp extends StatelessWidget {
         body: Column(  //column is an invisible widget present in the flutter that is used for arranging widget in column wise 
           children: [ // it has childreen widget to add multiple widgets 
             Text(
-              questions[0],
+              questions[index],
               style: TextStyle(// style widget is used to change the style of the text widget 
                 fontStyle: FontStyle.italic,
                 fontWeight: FontWeight.bold,
