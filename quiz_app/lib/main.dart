@@ -28,15 +28,33 @@ class Myapp extends StatelessWidget {
         ),
         body: Column(
           children: [
+            
             Text('the questions !'),
-            RaisedButton(child: Text('answer 1'),colorBrightness: Brightness.dark,onPressed: null,),
-            RaisedButton(child: Text('answer 2'),colorBrightness: Brightness.dark,onPressed: null,),
-            RaisedButton(child: Text('answer 3'),colorBrightness: Brightness.dark,onPressed: null,),
-            RaisedButton(child: Text('answer 4'),colorBrightness: Brightness.dark,onPressed: null,),
-            RaisedButton(child: Text('answer 5'),colorBrightness: Brightness.dark,onPressed: null,),
-
-
-
+            RaisedButton(
+              child: Text('answer 1'),
+              colorBrightness: Brightness.dark,
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('answer 2'),
+              colorBrightness: Brightness.dark,
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('answer 3'),
+              colorBrightness: Brightness.dark,
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('answer 4'),
+              colorBrightness: Brightness.dark,
+              onPressed: null,
+            ),
+            RaisedButton(
+              child: Text('answer 5'),
+              colorBrightness: Brightness.dark,
+              onPressed: null,
+            ),
           ],
         ), // column widget are the invisible widgets which are used for styling
         backgroundColor: Colors
