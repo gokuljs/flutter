@@ -40,7 +40,8 @@ ui changes ; \
 https://api.flutter.dev/flutter/painting/TextStyle-class.html \
 https://flutterawesome.com/random-color-generator-for-flutter \
 https://www.designwizard.com/blog/design-trends/colour-combination \
-https://api.flutter.dev/flutter/material/Colors-class.html \https://medium.com/flutter-community/beginners-guide-to-text-styling-in-flutter-3939085d6607 \
+https://api.flutter.dev/flutter/material/Colors-class.html \ 
+https://medium.com/flutter-community/beginners-guide-to-text-styling-in-flutter-3939085d6607 
 
 
 
