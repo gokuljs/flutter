@@ -1,23 +1,35 @@
 // this app is used for finding diffrent names for startup
 import 'package:english_words/english_words.dart' as prefix0;
-import 'package:flutter/material.dart';  //imports flutter packages 
-import 'package:english_words/english_words.dart'; // importing english words package 
+import 'package:flutter/material.dart'; //imports flutter packages
+import 'package:english_words/english_words.dart'; // importing english words package
 
 //pubspec file is the one which allows to add new dependencies for the flutter
-//pubspec.loc will be having list of all packages  
+//pubspec.loc will be having list of all packages
 
-void main() => runApp(Myapp()); // whole flutter is dependent on this which helps in building the app
+void main() => runApp(
+    Myapp()); // whole flutter is dependent on this which helps in building the app
 
-class Myapp extends StatelessWidget {  //stateles non-interactive widget
+class Myapp extends StatelessWidget {
+  //stateles non-interactive widget
   @override
-      
-  Widget build(BuildContext context) { //build the context
+  Widget build(BuildContext context) {
+    //build the context
 
     return MaterialApp(
-       title: 'Startup Name Generator',            
-       home: RandomWords(),
-      );//“Pascal case” (also known as “upper camel case”), means that each word in the string, including the first one, begins with an uppercase letter. So, “uppercamelcase” becomes “UpperCamelCase”.
-      
+        home: Scaffold(
+      appBar: AppBar(
+        title: Text('startup_namer',
+            style: TextStyle(
+              color: Colors.greenAccent,
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+              fontFamily: 'Open Sans',
+            )),
+        backgroundColor: Colors.black,
+      ),
+      body: RandomWords(),
+      backgroundColor: Colors.greenAccent,
+    )); //“Pascal case” (also known as “upper camel case”), means that each word in the string, including the first one, begins with an uppercase letter. So, “uppercamelcase” becomes “UpperCamelCase”.
   }
 }
 
@@ -31,7 +43,7 @@ Implementing a stateful widget requires at least two classes:
 */
 class RandomWordsState extends State<RandomWords> {
   // TODO Add build() method
-    @override
+  @override
   final _suggestions = <WordPair>[];
   final _biggerFont = const TextStyle(fontSize: 18.0);
   // ···
@@ -48,37 +60,35 @@ The ListView class provides a builder property, itemBuilder,
 
   */
   Widget _buildSuggestions() {
-  return ListView.builder(
-      padding: const EdgeInsets.all(16.0),
-      itemBuilder: /*1*/ (context, i) {
-        if (i.isOdd) return Divider(); /*2*/
+    return ListView.builder(
+        padding: const EdgeInsets.all(16.0),
+        itemBuilder: /*1*/ (context, i) {
+          if (i.isOdd) return Divider(); /*2*/
 
-        final index = i ~/ 2; /*3*/
-        if (index >= _suggestions.length) {
-          _suggestions.addAll(generateWordPairs().take(10)); /*4*/
-        }
-        return _buildRow(_suggestions[index]);
-      });
-}
-Widget _buildRow(WordPair pair) {
-  return ListTile(
-    title: Text(
-      pair.asPascalCase,
-      style: _biggerFont,
-    ),
-  );
-}
-  Widget build(BuildContext context) {  return Scaffold(
-    appBar: AppBar(
-      title: Text('Startup Name Generator'),
-    ),
-    body: _buildSuggestions(),
-  );
+          final index = i ~/ 2; /*3*/
+          if (index >= _suggestions.length) {
+            _suggestions.addAll(generateWordPairs().take(10)); /*4*/
+          }
+          return _buildRow(_suggestions[index]);
+        });
   }
-  
+
+  Widget _buildRow(WordPair pair) {
+    return ListTile(
+      title: Text(
+        pair.asPascalCase,
+        style: _biggerFont,
+      ),
+    );
+  }
+
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: _buildSuggestions(),
+      backgroundColor: Colors.orange,
+    );
+  }
 }
-
-
 
 class RandomWords extends StatefulWidget {
   @override
