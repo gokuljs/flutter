@@ -46,7 +46,7 @@ https://medium.com/flutter-community/beginners-guide-to-text-styling-in-flutter-
 
 # final app
 
-![](images/startupnamerapp.png)
+![](images/startupnamerapp.png) 
 
 
 
