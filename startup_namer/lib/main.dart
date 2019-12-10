@@ -14,16 +14,10 @@ class Myapp extends StatelessWidget {  //stateles non-interactive widget
   Widget build(BuildContext context) { //build the context
 
     return MaterialApp(
-      title: ('welcome to flutter'),  
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('welcome to flutter'),
-        ),
-        body: Center(
-        child: RandomWords(),//“Pascal case” (also known as “upper camel case”), means that each word in the string, including the first one, begins with an uppercase letter. So, “uppercamelcase” becomes “UpperCamelCase”.
-        ),                               //basic wat his does is gokul means output will like Gokul
-      ),
-    );
+       title: 'Startup Name Generator',            
+       home: RandomWords(),
+      );//“Pascal case” (also known as “upper camel case”), means that each word in the string, including the first one, begins with an uppercase letter. So, “uppercamelcase” becomes “UpperCamelCase”.
+      
   }
 }
 
@@ -41,11 +35,47 @@ class RandomWordsState extends State<RandomWords> {
   final _suggestions = <WordPair>[];
   final _biggerFont = const TextStyle(fontSize: 18.0);
   // ···
+  //ListView widget, grows infinitely. ListView’s builder factory constructor allows you to build a list view lazily
+  /*
+The ListView class provides a builder property, itemBuilder,
+ that’s a factory builder and callback function specified as an anonymous function. 
+ Two parameters are passed to the function—the BuildContext, and the row iterator, 
+ i. The iterator begins at 0 and increments each time the function is called. 
+ It increments twice for every suggested word pairing: once for the ListTile,
+  and once for the Divider. This model allows the suggested list to grow infinitely as the user scrolls.
+
+
+
+  */
+  Widget _buildSuggestions() {
+  return ListView.builder(
+      padding: const EdgeInsets.all(16.0),
+      itemBuilder: /*1*/ (context, i) {
+        if (i.isOdd) return Divider(); /*2*/
+
+        final index = i ~/ 2; /*3*/
+        if (index >= _suggestions.length) {
+          _suggestions.addAll(generateWordPairs().take(10)); /*4*/
+        }
+        return _buildRow(_suggestions[index]);
+      });
 }
-  Widget build(BuildContext context) {
-    final wordPair = WordPair.random();
-    return Text(wordPair.asPascalCase);
+Widget _buildRow(WordPair pair) {
+  return ListTile(
+    title: Text(
+      pair.asPascalCase,
+      style: _biggerFont,
+    ),
+  );
+}
+  Widget build(BuildContext context) {  return Scaffold(
+    appBar: AppBar(
+      title: Text('Startup Name Generator'),
+    ),
+    body: _buildSuggestions(),
+  );
   }
+  
 }
 
 
