@@ -31,4 +31,16 @@ vscode with android emulator
 
 # color code generator 
 
-https://flutterawesome.com/random-color-generator-for-flutter/
+https://flutterawesome.com/random-color-generator-for-flutter/ \
+https://api.flutter.dev/flutter/material/Colors-class.html
+
+# updations made
+
+ui changes ; \
+https://api.flutter.dev/flutter/painting/TextStyle-class.html \
+https://flutterawesome.com/random-color-generator-for-flutter \
+https://www.designwizard.com/blog/design-trends/colour-combination \
+https://api.flutter.dev/flutter/material/Colors-class.html \https://medium.com/flutter-community/beginners-guide-to-text-styling-in-flutter-3939085d6607 \
+
+
+
