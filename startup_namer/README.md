@@ -27,3 +27,8 @@ https://pub.dev/packages/english_words
 # used software 
 
 vscode with android emulator
+
+
+# color code generator 
+
+https://flutterawesome.com/random-color-generator-for-flutter/
