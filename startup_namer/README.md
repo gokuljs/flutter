@@ -44,9 +44,8 @@ https://api.flutter.dev/flutter/material/Colors-class.html \
 https://medium.com/flutter-community/beginners-guide-to-text-styling-in-flutter-3939085d6607 
 
 
-#final app
+# final app
 
-![](C:\Users\jsgok\OneDrive\Pictures\Screenshots/filename startupnamerapp.png)
 
 
 
