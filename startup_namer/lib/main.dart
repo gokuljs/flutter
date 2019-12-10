@@ -20,15 +20,15 @@ class Myapp extends StatelessWidget {
       appBar: AppBar(
         title: Text('startup_namer',
             style: TextStyle(
-              color: Colors.greenAccent,
+              color: Colors.black,
               fontWeight: FontWeight.bold,
               fontStyle: FontStyle.italic,
               fontFamily: 'Open Sans',
             )),
-        backgroundColor: Colors.black,
+        backgroundColor: Color(0XFF42539E),
       ),
       body: RandomWords(),
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: Color(0XFF42539E),
     )); //“Pascal case” (also known as “upper camel case”), means that each word in the string, including the first one, begins with an uppercase letter. So, “uppercamelcase” becomes “UpperCamelCase”.
   }
 }
@@ -77,7 +77,14 @@ The ListView class provides a builder property, itemBuilder,
     return ListTile(
       title: Text(
         pair.asPascalCase,
-        style: _biggerFont,
+        style: TextStyle(
+              color: Color(0XFF341037),
+              fontWeight: FontWeight.bold,
+              fontStyle: FontStyle.italic,
+              fontFamily: 'Open Sans',
+            ),
+        
+
       ),
     );
   }
@@ -85,7 +92,7 @@ The ListView class provides a builder property, itemBuilder,
   Widget build(BuildContext context) {
     return Scaffold(
       body: _buildSuggestions(),
-      backgroundColor: Colors.orange,
+      backgroundColor: Color(0XFFC4BFFD),
     );
   }
 }
