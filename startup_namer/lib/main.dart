@@ -10,7 +10,6 @@ void main() => runApp(Myapp()); // whole flutter is dependent on this which help
 
 class Myapp extends StatelessWidget {  //stateles non-interactive widget
   @override
-  final wordPair = WordPair.random();            
       
   Widget build(BuildContext context) { //build the context
 
@@ -21,9 +20,37 @@ class Myapp extends StatelessWidget {  //stateles non-interactive widget
           title: Text('welcome to flutter'),
         ),
         body: Center(
-          child: Text(wordPair.asPascalCase),//“Pascal case” (also known as “upper camel case”), means that each word in the string, including the first one, begins with an uppercase letter. So, “uppercamelcase” becomes “UpperCamelCase”.
+        child: RandomWords(),//“Pascal case” (also known as “upper camel case”), means that each word in the string, including the first one, begins with an uppercase letter. So, “uppercamelcase” becomes “UpperCamelCase”.
         ),                               //basic wat his does is gokul means output will like Gokul
       ),
     );
   }
+}
+
+/*
+Stateful widgets maintain state that might change during the lifetime of the widget. 
+Implementing a stateful widget requires at least two classes:
+ 1) a StatefulWidget class that creates an instance of 
+2) a State class. The StatefulWidget class is, itself, immutable,
+ but the State class persists over the lifetime of the widget.
+
+*/
+class RandomWordsState extends State<RandomWords> {
+  // TODO Add build() method
+    @override
+  final _suggestions = <WordPair>[];
+  final _biggerFont = const TextStyle(fontSize: 18.0);
+  // ···
+}
+  Widget build(BuildContext context) {
+    final wordPair = WordPair.random();
+    return Text(wordPair.asPascalCase);
+  }
+}
+
+
+
+class RandomWords extends StatefulWidget {
+  @override
+  RandomWordsState createState() => RandomWordsState();
 }
