@@ -8,9 +8,20 @@ import 'package:flutter/material.dart'; // package in which  is used to import f
 void main() => runApp(Myapp()); // other way of writing the above code
 // this can be used only if u have one app
 
-class Myapp extends StatelessWidget {
+class Myapp extends StatefulWidget {
+
+
+
+}
   //on purpose we overriding the program again and again
   // statelesswidget program slredy have a @override
+
+class MyappState extends State<Myapp> {  // contents inside this class wont change 
+// State<Myapp> means tells us that this state belongs to Myapp state 
+// they are persistent 
+//only contents inside statefull widget changes 
+
+
   var index=0;
   void answerquestion() {
     index=index+1;
