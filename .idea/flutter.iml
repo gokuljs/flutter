@@ -23,6 +23,8 @@
       <excludeFolder url="file://$MODULE_DIR$/my_first_app/build" />
       <excludeFolder url="file://$MODULE_DIR$/quiz_app/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/quiz_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/sqliteapp1/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/sqliteapp1/build" />
       <excludeFolder url="file://$MODULE_DIR$/startup_namer/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/startup_namer/build" />
       <excludeFolder url="file://$MODULE_DIR$/test_app/.pub" />

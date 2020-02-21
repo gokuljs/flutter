@@ -6,14 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="511d7c47-c944-4224-bb72-4c36e105b0a6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/flutter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/flutter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz_app/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/quiz_app/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/quiz_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/quiz_app/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup_namer/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/startup_namer/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/startup_namer/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/startup_namer/pubspec.lock" afterDir="false" />
-    </list>
+    <list default="true" id="511d7c47-c944-4224-bb72-4c36e105b0a6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
