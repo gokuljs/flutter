@@ -1,16 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main()=> runApp(
-  MaterialApp(
-    debugShowCheckedModeBanner: false,  //similiar to adding a checksum;
-    theme: ThemeData(   // intializzing all the theme values and styles before itself
-      brightness: Brightness.dark, // when theme widget written inside the material app style is applied throught out the laptopp
-      primaryColor: Colors.lightBlue,// 
-      accentColor: Colors.cyan[600]//
-
-    ),
-    
-  )
+  Myapp()
 );
 
 // first creating the statefull widget now
@@ -44,7 +35,13 @@ class _MyappState extends State<Myapp> {
     
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return MaterialApp(
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.lightBlue,
+        accentColor: Colors.cyan[600],
+      ),
+      home:Scaffold(
       appBar: AppBar(
         title:  Text("mysqlite")),
     body:Padding(padding: EdgeInsets.all(8.0),
@@ -79,6 +76,7 @@ class _MyappState extends State<Myapp> {
 
       ]
     ),
+    )
     )
     );
   }
