@@ -32,6 +32,18 @@ class _MyappState extends State<Myapp> {
       this.price=double.parse(price);  // we are giving price as string and converting it into double 
       print(this.price);
     }
+    createData(){
+      print("create");
+    }
+    readData(){
+      print("read");
+
+    }
+    updateData(){
+      print("delete");
+    }
+
+
     
   @override
   Widget build(BuildContext context) {
@@ -72,6 +84,41 @@ class _MyappState extends State<Myapp> {
           getPrice(price);
         },
         ),
+        Row(
+        textDirection: TextDirection.ltr,
+        children: <Widget>[
+          RaisedButton(
+            color:Colors.green,
+            child: Text("create"),
+            onPressed: (){
+              createData();
+            },
+
+          )
+          RaisedButton(
+\            child: Text("Read"),
+            onPressed: (){
+              readData();
+            },
+
+          )RaisedButton(
+            color:Colors.orange,
+            child: Text("update"),
+            onPressed: (){
+              updateData();
+            },
+
+          )
+          RaisedButton(
+            color:Colors.red,
+            child: Text("Delete"),
+            onPressed: (){
+              deleteData();
+            },
+
+          )
+        ],
+        )
 
 
       ]
