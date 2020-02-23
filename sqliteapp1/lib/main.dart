@@ -43,6 +43,11 @@ class _MyappState extends State<Myapp> {
       print("delete");
     }
 
+     deleteData(){
+       print("delete");
+     }
+
+
 
     
   @override
@@ -87,28 +92,40 @@ class _MyappState extends State<Myapp> {
         Row(
         textDirection: TextDirection.ltr,
         children: <Widget>[
-          RaisedButton(
+          Padding(
+          padding: EdgeInsets.only(right:8.0),
+          child:RaisedButton(
             color:Colors.green,
             child: Text("create"),
             onPressed: (){
               createData();
             },
 
-          )
-          RaisedButton(
-\            child: Text("Read"),
+          ),
+        ),
+
+           Padding(
+          padding: EdgeInsets.only(right:8.0),
+          child:RaisedButton(
+          child: Text("Read"),
             onPressed: (){
               readData();
             },
 
-          )RaisedButton(
+          ),
+           ),
+
+          Padding(
+          padding: EdgeInsets.only(right:8.0),
+          child:RaisedButton(
             color:Colors.orange,
             child: Text("update"),
             onPressed: (){
               updateData();
             },
 
-          )
+          ),
+          ),
           RaisedButton(
             color:Colors.red,
             child: Text("Delete"),
@@ -116,14 +133,16 @@ class _MyappState extends State<Myapp> {
               deleteData();
             },
 
-          )
+          ),
+          
         ],
         )
 
-
+        
       ]
     ),
     )
+    
     )
     );
   }
