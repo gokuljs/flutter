@@ -9,8 +9,10 @@ void main(){
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Text("hello"),
+    return MaterialApp( home:Scaffold(appBar: AppBar(title: Text("getting started"),),
+
+    ),
+    
       
     );
   }
