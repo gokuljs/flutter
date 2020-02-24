@@ -7,9 +7,11 @@ void main() {
 }
 
 class Myapp extends StatelessWidget {
+  var questionindex=0;
 
   void answerquetion(){
-    print('answer');
+     questionindex=questionindex+1;
+    print(questionindex);
   }
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class Myapp extends StatelessWidget {
         ), 
         body: Column(
           children: [
-            Text(question[0]),
+            Text(question[questionindex]),
             RaisedButton(
                           color: Colors.orange,
                           child: Text('answer1'), 
