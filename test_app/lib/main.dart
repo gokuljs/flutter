@@ -2,6 +2,8 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import './question.dart';
+
 void main() {
   runApp(Myapp());
 }
@@ -10,6 +12,9 @@ class Myapp extends StatefulWidget {
   @override
   _MyappState createState() => _MyappState();
 }
+
+// _ is important property i  flutter which makes things private 
+
 
 class _MyappState extends State<Myapp> {
   var questionindex=0;
@@ -25,7 +30,7 @@ class _MyappState extends State<Myapp> {
 
   @override
   Widget build(BuildContext context) {
-    var question = [
+    var questions = [
       'whats your favourite colour',
       'whats your favourite animal',
       'whats your favourite car',
@@ -48,7 +53,7 @@ class _MyappState extends State<Myapp> {
         
         body: Column(
           children: [
-            Text(question[questionindex]),
+            question(questions[questionindex]),
             RaisedButton(
                           color: Colors.redAccent,
                           child: Text('answer1'), 
@@ -59,7 +64,7 @@ class _MyappState extends State<Myapp> {
                         child: Text('answer2'), 
                           onPressed: answerquetion,),
             RaisedButton(
-                                                    color: Colors.redAccent,
+                             color: Colors.redAccent,
 
                             child: Text('answer3'),
                            onPressed:answerquetion),
