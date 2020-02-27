@@ -31,13 +31,27 @@ class _MyappState extends State<Myapp> {
 
   @override
   Widget build(BuildContext context) {
-    var questions = [
-      'whats your favourite colour',
-      'whats your favourite animal',
-      'whats your favourite car',
-      'whats your favourite caaxapr',
-      'whats your favourite caakmsmsr',
-      'whats your favourite caamsamsmar',
+
+    var questions = [{
+      'questiontext':'whats ypur favouirte color',
+      'answer':['balck','bluew','red','green']
+    },
+    {
+      'questiontext':'whats ypur favouirte animal',
+      'answer':['green','lion','amnmam','greeasmman']
+    }
+    ,{
+      'questiontext':'whats ypur favouirte color',
+      'answer':['baamsmalck','blamnsansuew','red asna,s','greea s,amsn']
+    },
+    {
+      'questiontext':'whats ypur favouirte color',
+      'answer':['baammlck','b ajbnxkananluew','rea s,a m,smad','greea,smamsn']
+    },
+    {
+      'questiontext':'whats ypur favouirte color',
+      'answer':['balck','bluew','red','green']
+    }
 
     ];
     return MaterialApp(
@@ -54,7 +68,7 @@ class _MyappState extends State<Myapp> {
         
         body: Column(
           children: [
-            question(questions[questionindex]),
+            question(questions[questionindex]['questiontext']),
             answer(answerquetion), //we can also pass pointer to function in awidget 
             answer(answerquetion),
             answer(answerquetion),

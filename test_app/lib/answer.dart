@@ -12,6 +12,7 @@ class answer extends StatelessWidget {
     return Container(
       width: double.infinity,
       child:RaisedButton(color: Colors.blue,
+                          textColor: Colors.black,
                           child: Text('answer1'), 
                           onPressed:select),
   
