@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 import './question.dart';
+import './answer.dart';
 
 void main() {
   runApp(Myapp());
@@ -54,25 +55,11 @@ class _MyappState extends State<Myapp> {
         body: Column(
           children: [
             question(questions[questionindex]),
-            RaisedButton(
-                          color: Colors.redAccent,
-                          child: Text('answer1'), 
-                          onPressed:answerquetion),
-            RaisedButton(
-                          color: Colors.redAccent,
-                        
-                        child: Text('answer2'), 
-                          onPressed: answerquetion,),
-            RaisedButton(
-                             color: Colors.redAccent,
+            answer(answerquetion), //we can also pass pointer to function in awidget 
+            answer(answerquetion),
+            answer(answerquetion),
+            answer(answerquetion),
 
-                            child: Text('answer3'),
-                           onPressed:answerquetion),
-            RaisedButton( 
-                          color: Colors.redAccent,
-                          child: Text('answer4'),
-                           onPressed: answerquetion,
-            )
           ],
         ),
       ),
