@@ -69,10 +69,9 @@ class _MyappState extends State<Myapp> {
         body: Column(
           children: [
             question(questions[questionindex]['questiontext']),
-            answer(answerquetion), //we can also pass pointer to function in awidget 
-            answer(answerquetion),
-            answer(answerquetion),
-            answer(answerquetion),
+           ... (question[questionindex]['answer'] as list<String>).map((answer){
+              return answer(answerquetion,answer);
+            }).
 
           ],
         ),
