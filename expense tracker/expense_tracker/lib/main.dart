@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main()=> runApp(Myapp());
 
 class Myapp extends StatelessWidget {
-  const Myapp({Key key}) : super(key: key);
+  
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,6 @@ class Myapp extends StatelessWidget {
 
 
 class Myhomepage extends StatelessWidget {
-  const Myhomepage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,8 +23,22 @@ class Myhomepage extends StatelessWidget {
           appBar: AppBar(
             title: Text('expense tracker'),
           ),
-          body: Center(
-            child:Text('widget playground'),
+          body:Column(
+            children: <Widget>[
+                Card(
+                  child:Container(
+                  width:double.infinity,// means take as much as width u can get 
+                  child: Text('chart'),
+                  color: Colors.blue,
+
+                ),
+                elevation: 6,
+
+                ),
+                Card(
+                  child:Text('list of transcations'),
+                )
+            ],
           ),
     );
   }
