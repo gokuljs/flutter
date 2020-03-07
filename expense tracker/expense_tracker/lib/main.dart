@@ -1,53 +1,30 @@
 import 'package:flutter/material.dart';
 
-import 'transcation.dart';
-import 'transcation.dart';
 
-void main()=> runApp(Myapp());
+class name extends StatelessWidget {
+  const name({Key key}) : super(key: key);
 
-class Myapp extends StatelessWidget {
-  
-
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'flutter app',
-      home: Myhomepage(),
+      title: 'expense tracker',
+      home:myhomepage(),
     );
   }
 }
 
 
-class Myhomepage extends StatelessWidget {
-
-  final List<Transaction> transactions=[
-    Transaction(  
-      id:'t1',
-      title: 'new shoes',
-      amount: 69.99,
-      date: DateTime.now()
-
-    ),
-    Transaction(
-      id:'t2',
-      title: 'new shoes',
-      amount: 69.99,
-      date: DateTime.now()
-
-    ),Transaction(
-      id:'t3',
-      title: 'new shoes',
-      amount: 69.99,
-      date: DateTime.now()
-
-    )
-  ];  // it is list of transaction with an empty list 
+class myhomepage extends StatelessWidget {
+  const myhomepage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          appBar: AppBar(
-            title: Text('expense tracker'),
-          ),
+      appBar: AppBar(
+        title:Text('expense tracker')
+      ),
+
+    
     );
   }
 }
