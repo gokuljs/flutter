@@ -20,7 +20,7 @@ class Myapp extends StatelessWidget {
 class Myhomepage extends StatelessWidget {
 
   final List<Transaction> transactions=[
-    Transaction(
+    Transaction(  
       id:'t1',
       title: 'new shoes',
       amount: 69.99,
@@ -47,16 +47,6 @@ class Myhomepage extends StatelessWidget {
     return Scaffold(
           appBar: AppBar(
             title: Text('expense tracker'),
-          ),
-          body:Column(  // used to add widgets one below the other (vertically)
-          // where row adds multiple widgets horizontally
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-          // main access and cross acces are the two major alignments which tells us how  the widget should be presitioned
-         children: transactions.map((tx) {
-           return Card(child:Text(tx.title)
-           );
-         }).toList(),
           ),
     );
   }
