@@ -53,23 +53,10 @@ class Myhomepage extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       crossAxisAlignment: CrossAxisAlignment.stretch,
           // main access and cross acces are the two major alignments which tells us how  the widget should be presitioned
-          children: <Widget>[
-                Container(
-                
-                  width: double.infinity,
-                  child: Card(
-                    // container is purely used for styling precesioning sizing widget u have
-                    // mainly used for aligingn and stuff 
-                  child:Text('chart'),
-                  color: Colors.blue,
-                  elevation: 9,
-
-                  ),
-                ),
-                Column(children: <Widget>[
-                  
-                ],)
-            ],
+         children: transactions.map((tx) {
+           return Card(child:Text(tx.title)
+           );
+         }).toList(),
           ),
     );
   }
