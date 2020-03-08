@@ -50,13 +50,16 @@ class myhomepage extends StatelessWidget {
           ),
         ),
         Container(
-          padding: EdgeInsets.all(15),
+          padding: EdgeInsets.all(13),
           child: Column(
-            
+            crossAxisAlignment: CrossAxisAlignment.end,
             children: <Widget>[
             
-            TextField(),
-            TextField(),
+            TextField(decoration: InputDecoration(labelText: 'title'),),
+            TextField(decoration: InputDecoration(labelText: 'amount'),),
+            FlatButton(onPressed: () {}, 
+            child: Text('Add transaction'),
+            textColor: Colors.orange,)
           ],),
         ),
         Column(children: transaction.map((tx) { 
