@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(myapp());
+}
 
-class name extends StatelessWidget {
-  const name({Key key}) : super(key: key);
+class myapp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class name extends StatelessWidget {
 
 
 class myhomepage extends StatelessWidget {
-  const myhomepage({Key key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +25,17 @@ class myhomepage extends StatelessWidget {
       appBar: AppBar(
         title:Text('expense tracker')
       ),
+      body: Column(children: <Widget>[
+        Container(
+          width: double.infinity,
+          color: Colors.cyan,
+          child: Card(child:Text('chart'),
+          elevation: 6,
+      
+          ),
+        ),
+        Card(child:Text('list of transactions'),)
+      ],)
 
     
     );
