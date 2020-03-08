@@ -52,13 +52,52 @@ class myhomepage extends StatelessWidget {
                   horizontal: 15,
                 ),
                 decoration: BoxDecoration(
-                  border: Border.all(),
+                  border: Border.all(color: Colors.grey,width: 2,),
                 ),
-                child: Text(tx.amount.toString()),
+                padding: EdgeInsets.all(3),  // to give space inside margin 
+                child: Text(tx.amount.toString(),
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20,
+                  color: Colors.blueGrey),
+                
+                  ),
+                  // for getting  bolded text 
+                
+                
               ),
-              Column(children: <Widget>[
-                Text(tx.title),
-                Text(tx.date.toString()),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+              
+                Container(
+                  margin: EdgeInsets.all(3),
+                  decoration: BoxDecoration(
+                    border: Border.all(color:Colors.redAccent ,width:2)
+                  ),
+                  padding: EdgeInsets.all(3),
+                  child: Text(tx.title,
+                  style: TextStyle(fontWeight: FontWeight.bold,
+                  color: Colors.purpleAccent,
+                  fontSize: 16,
+                  fontStyle: FontStyle.italic
+                  ),
+                  )
+                  ),
+                Container(
+                  
+                  margin: EdgeInsets.all(3),
+                  decoration: BoxDecoration(
+                    border: Border.all(color:Colors.redAccent ,width:2)
+                  ),
+                  padding: EdgeInsets.all(3),
+                  child: Text(tx.date.toString(),
+                  style: TextStyle(fontWeight: FontWeight.bold,
+                  color: Colors.purpleAccent,
+                  fontSize: 16,
+                  fontStyle: FontStyle.italic
+                  ),)),
+
               ],)
             ],),
             );
