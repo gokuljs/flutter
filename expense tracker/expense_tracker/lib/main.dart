@@ -1,9 +1,12 @@
 import 'transaction.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 void main() {
   runApp(myapp());
 }
+// this is a bult in package for formatiing date time in flutter called has intl
+// type dart date format to know more about it 
 
 class myapp extends StatelessWidget {
   @override
@@ -21,10 +24,12 @@ class myhomepage extends StatelessWidget {
     Transaction(id: 't1', amount: 10000, date: DateTime.now(), title: 'New shoes'),
     Transaction(id: 't2', amount: 10000, date: DateTime.now(), title: 'News'),
     Transaction(id: 't3', amount: 10000, date: DateTime.now(), title: 'Tv'),
-    Transaction(id: 't4', amount: 10000, date: DateTime.now(), title: 'Hello'),
-    Transaction(id: 't5', amount: 10000, date: DateTime.now(), title: 'World'),
+    Transaction(id: 't4', amount: 10000, date: DateTime.now(), title: 'grocery item'),
+    Transaction(id: 't5', amount: 10000, date: DateTime.now(), title: 'PS4'),
 
   ];
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -59,10 +64,10 @@ class myhomepage extends StatelessWidget {
                   horizontal: 15,
                 ),
                 decoration: BoxDecoration(
-                  border: Border.all(color: Colors.grey,width: 2,),
+                  border: Border.all(color: Colors.purple,width: 2,),
                 ),
                 padding: EdgeInsets.all(3),  // to give space inside margin 
-                child: Text(tx.amount.toString(),
+                child: Text('\$${tx.amount}',  // $ has special powe rof concatinating things and that special value of dollar can be nullified by /
                   style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
@@ -93,10 +98,10 @@ class myhomepage extends StatelessWidget {
                   
                   margin: EdgeInsets.all(3),
                   padding: EdgeInsets.all(3),
-                  child: Text(tx.date.toString(),
+                  child: Text(DateFormat('yyyy-MM-dd').format(tx.date),
                   style: TextStyle(fontWeight: FontWeight.bold,
-                  color: Colors.purpleAccent,
-                  fontSize: 10,
+                  color: Colors.blueGrey,
+                  fontSize: 16,
                   fontStyle: FontStyle.italic
                   ),)),
 
