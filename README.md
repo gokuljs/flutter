@@ -16,3 +16,9 @@ Visual Studio Code Flutter Extension: https://marketplace.visualstudio.com/items
 Android Studio: https://developer.android.com/studio/ 
 
 
+
+# intl dart format package 
+
+https://pub.dev/packages/intl
+
+
