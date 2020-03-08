@@ -1,4 +1,6 @@
+import 'package:expense_tracker/transaction.dart';
 import 'package:flutter/material.dart';
+import './transaction.dart';
 
 void main() {
   runApp(myapp());
@@ -17,7 +19,15 @@ class myapp extends StatelessWidget {
 
 
 class myhomepage extends StatelessWidget {
+  
+  final List<Transaction> transaction =[  // ur creating a list of transactions datetimenow built  in funtion in dart 
+    Transaction(id: 't1', amount: 10000, date: DateTime.now(), title: 'new shoes'),
+    Transaction(id: 't2', amount: 10000, date: DateTime.now(), title: 'news'),
+    Transaction(id: 't3', amount: 10000, date: DateTime.now(), title: 'tv'),
+    Transaction(id: 't4', amount: 10000, date: DateTime.now(), title: 'hello'),
+    Transaction(id: 't5', amount: 10000, date: DateTime.now(), title: 'world'),
 
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +44,12 @@ class myhomepage extends StatelessWidget {
       
           ),
         ),
-        Card(child:Text('list of transactions'),)
+        Column(children: transaction.map((tx) { // we are mapping everything to the list of transacton and returning a card widget based on the number of transaction present 
+          return Card(
+            child:Text(tx.title),
+            );
+        }).toList(),),
+          
       ],)
 
     
