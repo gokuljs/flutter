@@ -7,7 +7,7 @@ class Transaction{
   double amount;
   DateTime date;
   Transaction({   //creating a constructor 
-              // @ required tells us that the value should be passed 
+     @override           // @ required tells us that the value should be passed 
     @required this.id,
     @required this.amount,
     @required this.date,

@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import './transaction.dart';
+import 'package:flutter/material.dart';
 
 void main() {
   runApp(myapp());
@@ -46,7 +46,15 @@ class myhomepage extends StatelessWidget {
         Column(children: transaction.map((tx) { // we are mapping everything to the list of transacton and returning a card widget based on the number of transaction present 
           return Card(
             child:Row(children: <Widget>[
-              Container(child: Text(tx.amount.toString()),
+              Container(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 15,
+                ),
+                decoration: BoxDecoration(
+                  border: Border.all(),
+                ),
+                child: Text(tx.amount.toString()),
               ),
               Column(children: <Widget>[
                 Text(tx.title),
