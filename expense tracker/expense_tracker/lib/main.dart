@@ -1,4 +1,4 @@
-import './transaction.dart';
+import 'transaction.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,7 +6,6 @@ void main() {
 }
 
 class myapp extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,13 +17,12 @@ class myapp extends StatelessWidget {
 
 
 class myhomepage extends StatelessWidget {
-  
   final List<Transaction> transaction =[  // ur creating a list of transactions datetimenow built  in funtion in dart 
-    Transaction(id: 't1', amount: 10000, date: DateTime.now(), title: 'new shoes'),
-    Transaction(id: 't2', amount: 10000, date: DateTime.now(), title: 'news'),
-    Transaction(id: 't3', amount: 10000, date: DateTime.now(), title: 'tv'),
-    Transaction(id: 't4', amount: 10000, date: DateTime.now(), title: 'hello'),
-    Transaction(id: 't5', amount: 10000, date: DateTime.now(), title: 'world'),
+    Transaction(id: 't1', amount: 10000, date: DateTime.now(), title: 'New shoes'),
+    Transaction(id: 't2', amount: 10000, date: DateTime.now(), title: 'News'),
+    Transaction(id: 't3', amount: 10000, date: DateTime.now(), title: 'Tv'),
+    Transaction(id: 't4', amount: 10000, date: DateTime.now(), title: 'Hello'),
+    Transaction(id: 't5', amount: 10000, date: DateTime.now(), title: 'World'),
 
   ];
 
@@ -34,7 +32,13 @@ class myhomepage extends StatelessWidget {
       appBar: AppBar(
         title:Text('expense tracker')
       ),
-      body: Column(children: <Widget>[
+      body: Column(
+        
+        
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+      
+
         Container(
           width: double.infinity,
           color: Colors.cyan,
@@ -43,9 +47,12 @@ class myhomepage extends StatelessWidget {
       
           ),
         ),
-        Column(children: transaction.map((tx) { // we are mapping everything to the list of transacton and returning a card widget based on the number of transaction present 
+        Column(children: transaction.map((tx) { 
+        // we are mapping everything to the list of transacton and returning a card widget based on the number of transaction present 
+          
           return Card(
-            child:Row(children: <Widget>[
+            child:Row(
+              children: <Widget>[
               Container(
                 margin: EdgeInsets.symmetric(
                   vertical: 10,
@@ -72,29 +79,24 @@ class myhomepage extends StatelessWidget {
               
                 Container(
                   margin: EdgeInsets.all(3),
-                  decoration: BoxDecoration(
-                    border: Border.all(color:Colors.redAccent ,width:2)
-                  ),
-                  padding: EdgeInsets.all(3),
                   child: Text(tx.title,
-                  style: TextStyle(fontWeight: FontWeight.bold,
-                  color: Colors.purpleAccent,
-                  fontSize: 16,
-                  fontStyle: FontStyle.italic
+                  style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                  fontSize: 14,
+                  
+                
                   ),
                   )
                   ),
                 Container(
                   
                   margin: EdgeInsets.all(3),
-                  decoration: BoxDecoration(
-                    border: Border.all(color:Colors.redAccent ,width:2)
-                  ),
                   padding: EdgeInsets.all(3),
                   child: Text(tx.date.toString(),
                   style: TextStyle(fontWeight: FontWeight.bold,
                   color: Colors.purpleAccent,
-                  fontSize: 16,
+                  fontSize: 10,
                   fontStyle: FontStyle.italic
                   ),)),
 
