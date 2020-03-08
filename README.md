@@ -17,7 +17,7 @@ Android Studio: https://developer.android.com/studio/
 
 
 
-# intl dart format package 
+# intl date format package 
 
 https://pub.dev/packages/intl
 
