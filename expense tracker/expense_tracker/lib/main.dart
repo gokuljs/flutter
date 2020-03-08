@@ -1,4 +1,3 @@
-import 'package:expense_tracker/transaction.dart';
 import 'package:flutter/material.dart';
 import './transaction.dart';
 
@@ -46,7 +45,14 @@ class myhomepage extends StatelessWidget {
         ),
         Column(children: transaction.map((tx) { // we are mapping everything to the list of transacton and returning a card widget based on the number of transaction present 
           return Card(
-            child:Text(tx.title),
+            child:Row(children: <Widget>[
+              Container(child: Text(tx.amount.toString()),
+              ),
+              Column(children: <Widget>[
+                Text(tx.title),
+                Text(tx.date.toString()),
+              ],)
+            ],),
             );
         }).toList(),),
           
