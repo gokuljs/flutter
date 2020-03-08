@@ -23,9 +23,6 @@ class myhomepage extends StatelessWidget {
   final List<Transaction> transaction =[  // ur creating a list of transactions datetimenow built  in funtion in dart 
     Transaction(id: 't1', amount: 10000, date: DateTime.now(), title: 'New shoes'),
     Transaction(id: 't2', amount: 10000, date: DateTime.now(), title: 'News'),
-    Transaction(id: 't3', amount: 10000, date: DateTime.now(), title: 'Tv'),
-    Transaction(id: 't4', amount: 10000, date: DateTime.now(), title: 'grocery item'),
-    Transaction(id: 't5', amount: 10000, date: DateTime.now(), title: 'PS4'),
 
   ];
 
@@ -40,7 +37,7 @@ class myhomepage extends StatelessWidget {
       body: Column(
         
         
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
       
 
@@ -51,6 +48,16 @@ class myhomepage extends StatelessWidget {
           elevation: 6,
       
           ),
+        ),
+        Container(
+          padding: EdgeInsets.all(15),
+          child: Column(
+            
+            children: <Widget>[
+            
+            TextField(),
+            TextField(),
+          ],),
         ),
         Column(children: transaction.map((tx) { 
         // we are mapping everything to the list of transacton and returning a card widget based on the number of transaction present 
@@ -79,6 +86,7 @@ class myhomepage extends StatelessWidget {
                 
               ),
               Column(
+            
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
               
