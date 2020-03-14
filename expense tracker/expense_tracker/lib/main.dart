@@ -1,6 +1,7 @@
-import 'transaction.dart';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import './transaction.dart';
 
 void main() {
   runApp(myapp());
@@ -26,8 +27,13 @@ class myhomepage extends StatelessWidget {
 
   ];
 
-    String titleinput;
-    String amountinput;
+    //String titleinput;
+    //String amountinput;
+
+    final titlecontroller=TextEditingController(); // both are build in functions in flutter these both will connect to user input and output 
+    final amountcontroller=TextEditingController(); // both are goint going to connect to ypu input field 
+                                                    // and store all the values and give it later 
+
 
 
   @override
@@ -61,20 +67,23 @@ class myhomepage extends StatelessWidget {
 
               decoration: 
               InputDecoration(labelText: 'title'),
-              onChanged: (val) {
-                amountinput=val;
-              },
+              controller: titlecontroller,
+             // onChanged: (val) {
+              //  amountinput=val;
+            //  },
                     ),
             TextField(
               decoration: InputDecoration(labelText: 'amount'),
-              onChanged: (val){
-                titleinput=val;
-              },
+              controller: amountcontroller,
+            //  onChanged: (val){
+               // titleinput=val;
+              //},
               ),
             FlatButton(onPressed: () {
-              
-            print(titleinput);
-            print(amountinput);
+              print(titlecontroller.text);
+              print(amountcontroller.text);
+          //  print(titleinput);
+            //print(amountinput);
 
             }, 
             child: Text('Add transaction'),
