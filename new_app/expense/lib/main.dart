@@ -1,6 +1,9 @@
+import 'package:expense/widgets/new_transaction.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import './models/transaction.dart';
+import './widgets/new_transaction.dart';
+
 import './widgets/transaction_list.dart';
 
 void main()=>runApp(Myapp());
@@ -67,8 +70,8 @@ class Myhomepage extends StatelessWidget {
     // String titleinput;
     // String amountinput;
 
-    final titlecontroller=TextEditingController();
-    final amountcontroller=TextEditingController();
+    // final titlecontroller=TextEditingController();
+    // final amountcontroller=TextEditingController();
 
 
   @override
@@ -86,65 +89,67 @@ class Myhomepage extends StatelessWidget {
         
 
 
-        Card(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
+        // Card(
+        //   child: Column(
+        //     crossAxisAlignment: CrossAxisAlignment.end,
+        //     children: <Widget>[
               
-              Container(
+        //       Container(
                   
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 3,
-                  ),
-                  child:TextField(
-                    // onChanged: (val){
-                    //   titleinput=val;
-                    // },
-                    controller: titlecontroller,
-                    decoration: InputDecoration(
-                      labelText: "Title",
+        //           padding: EdgeInsets.symmetric(
+        //             horizontal: 10,
+        //             vertical: 3,
+        //           ),
+        //           child:TextField(
+        //             // onChanged: (val){
+        //             //   titleinput=val;
+        //             // },
+        //             controller: titlecontroller,
+        //             decoration: InputDecoration(
+        //               labelText: "Title",
                     
                 
 
-                    ),
-                  ),
-              ),
-              Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 10,
-                    vertical: 3,
-                  ),
-                   child:TextField(
-                    //  onChanged: (val) {
-                    //    amountinput=val;
-                    //  },
-                    controller: amountcontroller,
-                    decoration: InputDecoration(
-                      labelText: "Amount",
+        //             ),
+        //           ),
+        //       ),
+        //       Container(
+        //           padding: EdgeInsets.symmetric(
+        //             horizontal: 10,
+        //             vertical: 3,
+        //           ),
+        //            child:TextField(
+        //             //  onChanged: (val) {
+        //             //    amountinput=val;
+        //             //  },
+        //             controller: amountcontroller,
+        //             decoration: InputDecoration(
+        //               labelText: "Amount",
 
-                    ),
-              ),
+        //             ),
+        //       ),
           
-               ),
-               FlatButton(
-               //  onPressed: () {
-                  // print(titleinput);
-                  // print(amountinput);
-                // }, 
-                onPressed: (){
-                  print(titlecontroller.text);
-                  print(amountcontroller.text);
-                },
-                child:Text("Add transaction",style: TextStyle(
-                color: Colors.deepOrangeAccent                ),
+        //        ),
+        //        FlatButton(
+        //        //  onPressed: () {
+        //           // print(titleinput);
+        //           // print(amountinput);
+        //         // }, 
+        //         onPressed: (){
+        //           print(titlecontroller.text);
+        //           print(amountcontroller.text);
+        //         },
+        //         child:Text("Add transaction",style: TextStyle(
+        //         color: Colors.deepOrangeAccent                ),
                 
                
-               )
-               )
-           ],
-          ),
-        ),
+        //        )
+        //        )
+        //    ],
+        //   ),
+        // ),
+        Newtransaction(),
+        Transactionlist(),
        ],)
 
     );
