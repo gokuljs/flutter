@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import './transaction.dart';
+import './models/transaction.dart';
 
 void main()=>runApp(Myapp());
 class Myapp extends StatelessWidget {
@@ -63,7 +63,13 @@ class Myhomepage extends StatelessWidget {
       date: DateTime.now(),
       
       ),
-    ]; // variable transaction will create list of transaction
+     ]; 
+    // String titleinput;
+    // String amountinput;
+
+    final titlecontroller=TextEditingController();
+    final amountcontroller=TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -92,8 +98,14 @@ class Myhomepage extends StatelessWidget {
                     vertical: 3,
                   ),
                   child:TextField(
+                    // onChanged: (val){
+                    //   titleinput=val;
+                    // },
+                    controller: titlecontroller,
                     decoration: InputDecoration(
                       labelText: "Title",
+                    
+                
 
                     ),
                   ),
@@ -104,6 +116,10 @@ class Myhomepage extends StatelessWidget {
                     vertical: 3,
                   ),
                    child:TextField(
+                    //  onChanged: (val) {
+                    //    amountinput=val;
+                    //  },
+                    controller: amountcontroller,
                     decoration: InputDecoration(
                       labelText: "Amount",
 
@@ -112,9 +128,16 @@ class Myhomepage extends StatelessWidget {
           
                ),
                FlatButton(
-                 onPressed: null, 
+               //  onPressed: () {
+                  // print(titleinput);
+                  // print(amountinput);
+                // }, 
+                onPressed: (){
+                  print(titlecontroller.text);
+                  print(amountcontroller.text);
+                },
                 child:Text("Add transaction",style: TextStyle(
-                  color: Colors.deepOrangeAccent                ),
+                color: Colors.deepOrangeAccent                ),
                 
                
                )
