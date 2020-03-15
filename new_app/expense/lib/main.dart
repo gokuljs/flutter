@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import './transaction.dart';
 
@@ -40,6 +41,28 @@ class Myhomepage extends StatelessWidget {
       date: DateTime.now(),
       
       ),
+      
+       Transaction(
+      id: 't3',
+      title: "New lap",
+      amount:1700,
+      date: DateTime.now(),
+      
+      ),
+       Transaction(
+      id: 't3',
+      title: "New lap",
+      amount:1700,
+      date: DateTime.now(),
+      
+      ),
+       Transaction(
+      id: 't3',
+      title: "New lap",
+      amount:1700,
+      date: DateTime.now(),
+      
+      ),
     ]; // variable transaction will create list of transaction
 
   @override
@@ -51,32 +74,72 @@ class Myhomepage extends StatelessWidget {
       ),
 
       body:Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+       // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
       children: <Widget>[
         
-        Container(
-          width: double.infinity,
-          color: Colors.blueAccent,
-        
-            child:Text('chart part'),
+
+
+        Card(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: <Widget>[
+              
+              Container(
+                  
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 3,
+                  ),
+                  child:TextField(
+                    decoration: InputDecoration(
+                      labelText: "Title",
+
+                    ),
+                  ),
+              ),
+              Container(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 3,
+                  ),
+                   child:TextField(
+                    decoration: InputDecoration(
+                      labelText: "Amount",
+
+                    ),
+              ),
           
+               ),
+               FlatButton(
+                 onPressed: null, 
+                child:Text("Add transaction",style: TextStyle(
+                  color: Colors.deepOrangeAccent                ),
+                
+               
+               )
+               )
+           ],
+          ),
         ),
         Card(
           child: Column(
-            mainAxisAlignment:MainAxisAlignment.start ,
+            mainAxisAlignment:MainAxisAlignment.spaceBetween ,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: transaction.map((tx) {
               return Row(
+                
                 children: <Widget>[
                   Container(
-                    child:Text(tx.amount.toString(),
+                    
+                    child:Text('\$${tx.amount}',
                     style: TextStyle(
                       fontSize: 23,
                       color: Colors.purpleAccent,
-                      fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold,
                     
                     ),),
+                    
                   decoration: BoxDecoration(
                     border: Border.all(
                       color:Colors.purple,
@@ -85,7 +148,9 @@ class Myhomepage extends StatelessWidget {
                   ),
 
                   margin:EdgeInsets.all(10),
-                  padding: EdgeInsets.all(6),
+                  padding: EdgeInsets.symmetric(
+                    horizontal:10,
+                  vertical: 3),
                   ),
 
                   Column(
@@ -95,14 +160,14 @@ class Myhomepage extends StatelessWidget {
                     
                     Container(
                       child:Text(tx.title,style: TextStyle(
-                        fontSize: 15,
+                        fontSize: 16,
                         fontWeight:FontWeight.bold,
 
                       ),),
 
                       ),
                     Container(
-                      child:Text(tx.date.toString(),
+                      child:Text(DateFormat('yyyy-mm-dd').format(tx.date),
                       style:TextStyle(
                         color:Colors.blueGrey
                       ))
