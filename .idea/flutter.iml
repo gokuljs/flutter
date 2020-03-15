@@ -19,8 +19,12 @@
       <sourceFolder url="file://$MODULE_DIR$/gen" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/basics-02-column-raisedbutton-anonymous-functions/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/basics-02-column-raisedbutton-anonymous-functions/build" />
+      <excludeFolder url="file://$MODULE_DIR$/expense tracker/expense_tracker/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/expense tracker/expense_tracker/build" />
       <excludeFolder url="file://$MODULE_DIR$/my_first_app/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/my_first_app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/new_app/expense/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/new_app/expense/build" />
       <excludeFolder url="file://$MODULE_DIR$/quiz_app/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/quiz_app/build" />
       <excludeFolder url="file://$MODULE_DIR$/sqliteapp1/.pub" />

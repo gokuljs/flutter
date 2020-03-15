@@ -1,4 +1,4 @@
-package com.example.expense_tracker
+package com.example.expense
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity

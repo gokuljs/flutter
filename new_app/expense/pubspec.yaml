@@ -1,4 +1,4 @@
-name: expense_tracker
+name: expense
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -17,8 +17,6 @@ environment:
   sdk: ">=2.1.0 <3.0.0"
 
 dependencies:
-  intl: ^0.16.1
-
   flutter:
     sdk: flutter
 
