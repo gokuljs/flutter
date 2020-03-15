@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import './transaction.dart';
 
 void main()=>runApp(Myapp());
@@ -27,6 +28,14 @@ class Myhomepage extends StatelessWidget {
        Transaction(
       id: 't2',
       title: "New laptop",
+      amount:1700,
+      date: DateTime.now(),
+      
+      ),
+      
+       Transaction(
+      id: 't3',
+      title: "New lap",
       amount:1700,
       date: DateTime.now(),
       
